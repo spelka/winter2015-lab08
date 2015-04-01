@@ -1,16 +1,19 @@
 <?php
 
 /**
- * Our registered users' content. 
- * 
+ * Our registered users' content.
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
-class Beta extends Application {
+class Beta extends Application
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
+        $this->restrict(array(ROLE_USER,ROLE_ADMIN));
     }
 
     //-------------------------------------------------------------
